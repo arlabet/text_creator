@@ -1,6 +1,6 @@
 def sentence_maker(phrase):
 	capitalized = phrase.capitalize()
-	if phrase.startswith(("how", "why", "what")):
+	if phrase.startswith(("how", "why", "what", "where")):
 		marq = capitalized + "? "
 	else:
 		marq = capitalized + ". "
@@ -12,14 +12,9 @@ all_text = []
 
 while (phrase != "\end"):
 	phrase = input("Say something: ")
-	all_text.append(phrase)
+	phrase_bet = sentence_maker(phrase)
+	all_text.append(phrase_bet)
 
-new_text = []
+all_text.remove(all_text[-1])
 
-for element in all_text:
-	element = sentence_maker(element)
-	new_text.append(element)
-
-new_text.remove(new_text[-1])
-
-print(*new_text)
+print(*all_text)
