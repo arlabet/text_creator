@@ -17,4 +17,4 @@ while (phrase != "\end"):
 
 all_text.remove(all_text[-1])
 
-print(*all_text)
+print(" ".join(all_text))
