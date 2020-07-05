@@ -12,9 +12,8 @@ all_text = []
 
 while (phrase != "\end"):
 	phrase = input("Say something: ")
-	phrase_bet = sentence_maker(phrase)
-	all_text.append(phrase_bet)
-
-all_text.remove(all_text[-1])
+	if (phrase != "\end"):
+		phrase_bet = sentence_maker(phrase)
+		all_text.append(phrase_bet)
 
 print(" ".join(all_text))
